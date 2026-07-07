@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:linear-gradient(135deg,#2b0000,#5d0018,#8b0000);
+    color:white;
+}
+
+.screen{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:30px;
+    transition:1s;
+}
+
+.hidden{
+    opacity:0;
+    pointer-events:none;
+    transform:scale(.95);
+}
+
+h1{
+    font-size:42px;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+button{
+    background:#000;
+    color:white;
+    border:none;
+    padding:15px 45px;
+    font-size:20px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.small{
+    margin-top:20px;
+    font-size:20px;
+}
+
+#text{
+    width:90%;
+    max-width:700px;
+    font-size:22px;
+    line-height:1.8;
+    min-height:260px;
+    white-space:pre-wrap;
+}
+
+#nextBtn{
+    margin-top:30px;
+    display:none;
+}
+
+.envelope{
+    width:260px;
+    height:180px;
+    position:relative;
+    cursor:pointer;
+    perspective:1000px;
+}
+
+.base{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:white;
+    border-radius:8px;
+}
+
+.flap{
+    position:absolute;
+    width:100%;
+    height:90px;
+    background:#ececec;
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    transform-origin:top;
+    transition:1s;
+    z-index:5;
+}
+
+.paper{
+    position:absolute;
+    width:90%;
+    height:150px;
+    background:#fffdf7;
+    left:5%;
+    bottom:0;
+    border-radius:8px;
+    color:#8b0000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    font-size:22px;
+    transform:translateY(100px);
+    transition:1s;
+}
+
+.open .flap{
+    transform:rotateX(180deg);
+}
+
+.open .paper{
+    transform:translateY(-70px);
+}
+
+.tap{
+    margin-top:30px;
+    opacity:.8;
+}
