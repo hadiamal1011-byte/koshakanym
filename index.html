@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для моей любви ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="screen" id="screen1">
+    <h1>Ты готова, моя любовь?🙂</h1>
+
+    <button onclick="openLetter()">Готова</button>
+
+    <div class="small">Спасибо за всё ❤️</div>
+</div>
+
+<div class="screen hidden" id="screen2">
+    <h1>Жонушка ❤️</h1>
+
+    <div id="text"></div>
+
+    <button id="nextBtn" onclick="showEnvelope()">
+        Давай поговорим
+    </button>
+</div>
+
+<div class="screen hidden" id="screen3">
+
+    <div class="envelope" onclick="this.classList.toggle('open')">
+
+        <div class="flap"></div>
+
+        <div class="base"></div>
+
+        <div class="paper">
+            Если хочешь поговорить,<br>
+            напиши. ❤️
+        </div>
+
+    </div>
+
+    <div class="tap">Нажми на конверт 💌</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
